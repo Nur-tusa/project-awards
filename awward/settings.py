@@ -38,6 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'prize',
+    'users.apps.UsersConfig',
+    'rest_framework',
+    'django_comments',
+    'django.contrib.sites',
+    'crispy_forms',
+    'django_cleanup',
 ]
 
 MIDDLEWARE = [
@@ -76,11 +82,14 @@ WSGI_APPLICATION = 'awward.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'award',
+        'USER': 'moringa',
+        'PASSWORD':'',
+        'PORT': '',
+
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
