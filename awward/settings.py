@@ -11,6 +11,14 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
+import dj_database_url
+import cloudinary, os
+import cloudinary.uploader
+import cloudinary.api
+from decouple import config
+import django_heroku
+from decouple import config,Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -134,3 +142,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+cloudinary.config( 
+  cloud_name = "galole", 
+  api_key = "634199572341492", 
+  api_secret = "django-insecure-j@$0wp(y=5ob7zzb4&r4xt9fx-su-6bq2_o0bo$9n=mw0psb&)" 
+)
