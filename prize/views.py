@@ -158,6 +158,7 @@ class ProjectDetailView(DetailView):
 class ProjectCreateView(CreateView):
     model = Project
     fields = ['img','title','description','link']
+    template_name = 'awwards/project_form.html'
 
     def form_valid(self, form):
         # we override the create validation to tell it this is the author of the post. Otherwise we'll get an integrity error
