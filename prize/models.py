@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.core.validators import MaxValueValidator, MinValueValidator 
+from PIL import Image
 
 class Project(models.Model):
     img = models.ImageField(default='default.png', upload_to='images')
@@ -69,3 +70,16 @@ class ProjectVote(models.Model):
 
     def __str__(self):
         return f'{self.design} marks'
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.CharField(default='Available', max_length = 60)
+    image = models.ImageField(default='profile.png', upload_to='images')
+
+    def __str__(self):
+        return f'{self.user.username} Profile'
+
+    @classmethod
+    def get_profile(cls,user):
+        profile=cls.objects.get(user=user)
+        return profile
