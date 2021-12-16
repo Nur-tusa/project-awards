@@ -33,11 +33,7 @@ Testing the application.
 
 Open the application on your browser `127.0.0.1:8000`.  
 
-##### local-Machine
-```bash
-http://localhost:8000/api/users
-http://localhost:8000/api/projects
-http://localhost:8000/api/profile
+
 ```
 ##### Live Link
 ```bash
