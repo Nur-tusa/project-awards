@@ -29,6 +29,33 @@ Now Migrate.
 Run the application.
 Running the application.
 Testing the application.
+##### open applicatio
+
+Open the application on your browser `127.0.0.1:8000`.  
+
+##### local-Machine
+```bash
+http://localhost:8000/api/users
+http://localhost:8000/api/projects
+http://localhost:8000/api/profile
+```
+##### Live Link
+```bash
+https://awwards-tusa.herokuapp.com/
+```
+  
+### Access Django Admin
+```bash
+>>> Username: nuurtusa
+>>> Password: <saatar.6>
+```
+6.  Run initial Migration 
+    -python3 manage.py makemigrations awwards 
+    -python3 manage.py migrate .Run the app 
+    -python3 manage.py runserver 
+    -Open terminal on localhost:8000
+
+
 ## Technologies Used
 * python3.9
 
